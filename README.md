@@ -1,4 +1,4 @@
-# Adding_ND2_images_to_python
+# NDtwoPy
 This repository includes an implementation of the pims_nd2 reader for different image-iteration axes
 
 nd2_to_array:
