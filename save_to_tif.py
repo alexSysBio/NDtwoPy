@@ -1,16 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Jun 21 15:08:07 2021
+Created on Mon Nov 3 21:50:07 2025
 
-@author: Alexandros Papagiannakis, Christine Jacobs-Wagner lab, Sarafan ChEM-H, Stanford University 2021
-Cite:
-    https://www.biorxiv.org/content/10.1101/2024.10.08.617237v2.full
-    DNA/polysome phase separation and cell width confinement couple nucleoid segregation 
-    to cell growth in Escherichia coli
-    
-    Alexandros Papagiannakis, Qiwei Yu, Sander K. Govers, Wei-Hsiang Lin,  Ned S. Wingreen, Christine Jacobs-Wagner
-    
-    bioRxiv, https://doi.org/10.1101/2024.10.08.617237, October 22, 2024
+@author: Alexandros Papagiannakis, Christine Jacobs-Wagner lab, Sarafan ChEM-H, Stanford University 2025
 """
 
 import os
@@ -126,4 +118,5 @@ def save_multiple_tif_files_for_cell_segmentation(images_path, save_path, channe
         
                 
                 
+
                 
