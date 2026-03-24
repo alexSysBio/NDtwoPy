@@ -14,7 +14,7 @@ Or the nd2 image reader from the Open Science Tools:
   Cite:
     https://www.biorxiv.org/content/10.1101/2024.10.08.617237v2.full
     
-    Nonequilibrium polysome dynamics promote chromosome segregation and its coupling to cell growth in <i>Escherichia coli</i>
+    Nonequilibrium polysome dynamics promote chromosome segregation and its coupling to cell growth in **Escherichia col**
     
     Alexandros Papagiannakis, Qiwei Yu, Sander K. Govers, Wei-Hsiang Lin,  Ned S. Wingreen, Christine Jacobs-Wagner
     
