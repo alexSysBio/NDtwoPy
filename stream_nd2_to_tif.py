@@ -4,8 +4,6 @@ Created on Mon Mar 23 13:20:05 2026
 @author: Alexandros Papagiannakis, Christine Jacobs-Wagner lab, Sarafan ChEM-H, Stanford University 2026 
 
 Memory-efficient ND2 to TIF converter.
-Original author: Alexandros Papagiannakis, Christine Jacobs-Wagner lab, Sarafan ChEM-H, Stanford University
-Refactored for memory efficiency.
 
 This script processes ND2 files frame-by-frame ("streaming") to avoid loading the
 entire file into RAM. It iterates through the ND2 file, saves each frame as a
