@@ -12,7 +12,7 @@ Or the nd2 image reader from the Open Science Tools:
   I have tested most of the implemented iterations from microscopy images I have acquired. If the remaining iterations do not work it should be an easy fix. Please reach out to address any exceptions.
 
   Cite:
-    https://www.biorxiv.org/content/10.1101/2024.10.08.617237v2.full
+    [https://www.biorxiv.org/content/10.1101/2024.10.08.617237v2.full](https://elifesciences.org/articles/104276#references)
     
     Nonequilibrium polysome dynamics promote chromosome segregation and its coupling to cell growth in Escherichia coli.
     
