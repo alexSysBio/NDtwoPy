@@ -13,10 +13,8 @@ TIFF image, and then discards the frame from memory before loading the next one.
 """
 
 import os
-# import numpy as np
 from pims import ND2_Reader
 from skimage import io
-
 
 
 def get_position_string(position_int):
@@ -72,7 +70,7 @@ def get_iteration_axes_and_dims(images):
 
 
 
-def stream_nd2_to_tif(nd2_path, save_path, experiment_id, channel_selection='none'):
+def stream_nd2_to_tif(nd2_path, experiment_id, channel_selection='none'):
     """
     Reads an ND2 file frame-by-frame and saves each frame as a TIFF file.
 
@@ -153,6 +151,8 @@ def stream_nd2_to_tif(nd2_path, save_path, experiment_id, channel_selection='non
             # Create a structured output path: save_path/xy01/Phase/experiment_xy01_Phase_t0000.tif
             # This structure is based on your 'mct' iteration logic.
             # We use os.path.join for cross-platform compatibility.
+            save_path = nd2_path[:-4]+'_timelapse_phase'
+            os.makedirs(save_path, exist_ok=True) # `exist_ok=True` prevents errors if dir exists
             output_dir = os.path.join(save_path, position_str)
             os.makedirs(output_dir, exist_ok=True) # `exist_ok=True` prevents errors if dir exists
             
@@ -169,20 +169,16 @@ def stream_nd2_to_tif(nd2_path, save_path, experiment_id, channel_selection='non
     print(f"Finished processing {experiment_id}.")
 
 
-def process_directory_of_nd2s(images_path, save_path, channel_selection):
+def iterate_and_stream(experiment_path):
     """
     Finds all .nd2 files in a directory and converts them to TIFFs using the
     memory-efficient streaming method.
     """
-    if not os.path.exists(save_path):
-        os.makedirs(save_path)
-        
-    image_files = [f for f in os.listdir(images_path) if f.lower().endswith('.nd2')]
-    
-    for img_file in image_files:
-        nd2_path = os.path.join(images_path, img_file)
-        experiment_name = os.path.splitext(img_file)[0]
-        
-        # The main call to the streaming function
-        stream_nd2_to_tif(nd2_path, save_path, experiment_name, channel_selection)
+    for exp in os.listdir(experiment_path):
+        exp_path = os.path.join(experiment_path, exp)
+        image_file = [f for f in os.listdir(exp_path) if f.lower().endswith('.nd2')][0]
+        nd2_path = os.path.join(exp_path, image_file)
+        experiment_id = image_file[:-4]
+        print(nd2_path, experiment_id)
+        stream_nd2_to_tif(nd2_path, experiment_id)
 
