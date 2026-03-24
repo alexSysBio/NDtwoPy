@@ -14,12 +14,11 @@ Or the nd2 image reader from the Open Science Tools:
   Cite:
     https://www.biorxiv.org/content/10.1101/2024.10.08.617237v2.full
     
-    DNA/polysome phase separation and cell width confinement couple nucleoid segregation 
-    to cell growth in Escherichia coli
+    Nonequilibrium polysome dynamics promote chromosome segregation and its coupling to cell growth in Escherichia coli
     
     Alexandros Papagiannakis, Qiwei Yu, Sander K. Govers, Wei-Hsiang Lin,  Ned S. Wingreen, Christine Jacobs-Wagner
     
-    bioRxiv, https://doi.org/10.1101/2024.10.08.617237, October 22, 2024
+    Jun 24, 2025, https://doi.org/10.7554/eLife.104276.3
 
 
 This repository includes different implementations of the ND2 readers, including a script to stream image arrays and store them into .tif files: <code> stream_nd2_to_tif.py </code>. This latest script is a very memory-efficient and fast method to export ND2 files and it is highly recommended to slower GUI-dependent methods, or other functions that upload the entire set of arrays on the memory before exporting.
